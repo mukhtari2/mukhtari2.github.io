@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Suleiman Mukhtar | Full Stack Developer</title>
+  <meta name="description" content="Portfolio of Suleiman Mukhtar, Full Stack Developer working with Java, Spring Boot, Python, FastAPI, React and more." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="#home" class="logo">SM<span>.</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">&#9680;</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero container">
+      <p class="eyebrow">Hello, I'm</p>
+      <h1>Suleiman Mukhtar</h1>
+      <h2 class="role">Full Stack Developer<span id="typed"></span><span class="cursor">|</span></h2>
+      <p class="lead">
+        I build secure, robust web applications designed for longevity, with clean code and a strict
+        test-driven approach.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">View my projects</a>
+        <a href="#contact" class="btn btn-ghost">Get in touch</a>
+      </div>
+      <ul class="socials">
+        <li><a href="https://www.github.com/mukhtari2" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/suleiman-mukhtar" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="mailto:mukhtarisule@gmail.com">Email</a></li>
+      </ul>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section container reveal">
+      <h2 class="section-title">About me</h2>
+      <div class="about-grid">
+        <p>
+          Innovative Full Stack Developer with about 1+ years of experience building secure, robust web
+          applications designed for longevity. I deliver high-quality, bug-free code using a strict TDD
+          approach, and I craft responsive interfaces with React, HTML5, and Tailwind CSS while engineering
+          scalable back-end systems using Java, PHP, and JavaScript.
+        </p>
+        <p>
+          I manage complex data with PostgreSQL for relational integrity and MongoDB for flexible,
+          high-performance NoSQL storage. I'm dedicated to writing clean, maintainable code that ensures
+          system resilience and a seamless user experience across diverse database architectures.
+        </p>
+      </div>
+      <ul class="facts">
+        <li><strong>Location</strong> Benin, Edo State, Nigeria</li>
+        <li><strong>Currently</strong> Java Engineer at Travelway</li>
+        <li><strong>Phone</strong> <a href="tel:+2348061397245">+234-8061397245</a></li>
+      </ul>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section container reveal">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-grid">
+        <div class="card">
+          <h3>Back-end</h3>
+          <div class="tags">
+            <span>Java</span><span>Spring Boot</span><span>Python</span><span>FastAPI</span><span>PHP</span><span>Laravel</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Front-end</h3>
+          <div class="tags">
+            <span>JavaScript</span><span>ReactJS</span><span>HTML5</span><span>CSS3</span><span>Tailwind CSS</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Databases</h3>
+          <div class="tags">
+            <span>PostgreSQL</span><span>MongoDB</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Tools &amp; Practices</h3>
+          <div class="tags">
+            <span>Test-driven development</span><span>Git &amp; GitHub</span><span>Postman</span><span>Claude</span><span>Claude Code</span>
+          </div>
+        </div>
+        <div class="card card-wide">
+          <h3>Interpersonal</h3>
+          <div class="tags">
+            <span>Team building &amp; leadership</span><span>Analytical thinking &amp; problem solving</span><span>Feedback reception</span><span>Time management</span><span>Communication &amp; collaboration</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section container reveal">
+      <h2 class="section-title">Projects</h2>
+      <p class="section-sub">Three Python FastAPI services that use Claude for summarization, classification and retrieval.</p>
+
+      <div class="project-grid">
+        <article class="card project">
+          <span class="project-num">01</span>
+          <h3>Meeting Notes to Action Items</h3>
+          <p>
+            Upload a transcript, or paste one into a form. The service sends it to Claude and asks for a
+            summary, decisions made, and action items with owners and due dates. The output is saved to a
+            database and optionally emailed to attendees.
+          </p>
+          <ul class="project-points">
+            <li><strong>Claude's job:</strong> summarization and structured extraction</li>
+            <li><strong>Approach:</strong> define the output schema up front, or use tool use to force structured output, so owners and dates parse reliably</li>
+          </ul>
+          <div class="tags small">
+            <span>FastAPI</span><span>Anthropic SDK</span><span>SQLite / Postgres</span><span>Email API</span>
+          </div>
+        </article>
+
+        <article class="card project">
+          <span class="project-num">02</span>
+          <h3>Email Inbox Sorter &amp; Reply Drafter</h3>
+          <p>
+            A small service polls a mailbox (Gmail or IMAP) and sends each new email to Claude. It gets
+            back a label (invoice, lead, newsletter, personal, urgent) plus a draft reply for the ones that
+            need one. The code applies the labels and saves drafts without sending anything.
+          </p>
+          <ul class="project-points">
+            <li><strong>Claude's job:</strong> classification and drafting in my tone, guided by 3-4 examples of past replies</li>
+            <li><strong>Next step:</strong> a daily digest email listing what needs attention</li>
+          </ul>
+          <div class="tags small">
+            <span>FastAPI</span><span>Anthropic SDK</span><span>Gmail API / IMAP</span><span>Cron</span>
+          </div>
+        </article>
+
+        <article class="card project">
+          <span class="project-num">03</span>
+          <h3>Document Q&amp;A Over Your Files</h3>
+          <p>
+            Retrieve relevant chunks from your PDFs, pass them to Claude together with the question, and
+            return a cited answer so every response can be traced back to its source document.
+          </p>
+          <ul class="project-points">
+            <li><strong>Claude's job:</strong> answering from retrieved context and citing sources</li>
+            <li><strong>Approach:</strong> chunk and index PDFs, retrieve the best matches, then ground the answer in them</li>
+          </ul>
+          <div class="tags small">
+            <span>FastAPI</span><span>Anthropic SDK</span><span>PDF parsing</span><span>Retrieval</span>
+          </div>
+        </article>
+      </div>
+
+      <p class="more">
+        See the code on <a href="https://www.github.com/mukhtari2" target="_blank" rel="noopener">my GitHub</a>.
+      </p>
+    </section>
+
+    <!-- EXPERIENCE & EDUCATION -->
+    <section id="experience" class="section container reveal">
+      <h2 class="section-title">Experience</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-head">
+            <h3>Java Engineer</h3>
+            <span class="date">Jan 2025 - Present</span>
+          </div>
+          <p class="org">Travelway, Lagos, Nigeria</p>
+          <ul>
+            <li>Back-end RESTful API development with Java and Spring Boot, using JSON Web Tokens (JWT) to build secure REST APIs.</li>
+            <li>Wrote unit and integration tests with Mockito and JUnit that adhere to BDD, speeding up development cycles.</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2 class="section-title edu-title">Education</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-head">
+            <h3>Software Engineering</h3>
+            <span class="date">2025</span>
+          </div>
+          <p class="org">Kya Technologies</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-head">
+            <h3>B.Tech, Geology</h3>
+            <span class="date">2021</span>
+          </div>
+          <p class="org">Federal University of Technology, Niger State, Nigeria</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section container reveal">
+      <h2 class="section-title">Contact</h2>
+      <p class="section-sub">Have a role or project in mind? Let's talk.</p>
+      <div class="contact-grid">
+        <a class="card contact-card" href="mailto:mukhtarisule@gmail.com">
+          <strong>Email</strong>
+          <span>mukhtarisule@gmail.com</span>
+        </a>
+        <a class="card contact-card" href="tel:+2348061397245">
+          <strong>Phone</strong>
+          <span>+234-8061397245</span>
+        </a>
+        <a class="card contact-card" href="https://www.linkedin.com/in/suleiman-mukhtar" target="_blank" rel="noopener">
+          <strong>LinkedIn</strong>
+          <span>suleiman-mukhtar</span>
+        </a>
+        <a class="card contact-card" href="https://www.github.com/mukhtari2" target="_blank" rel="noopener">
+          <strong>GitHub</strong>
+          <span>mukhtari2</span>
+        </a>
+      </div>
+      <button class="btn btn-primary copy-btn" id="copyEmail">Copy email address</button>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> Suleiman Mukhtar. Built with HTML, CSS and JavaScript.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
